@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You for Your Purchase ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a40);
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    .button {
+      background: #ff005c;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(255, 0, 92, 0.6);
+    }
+
+    .button:hover {
+      background: #ff3c8e;
+      box-shadow: 0 0 25px rgba(255, 0, 92, 0.9);
+    }
+
+    .insta {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .insta img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .insta a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .insta a:hover {
+      color: #ff4d88;
+    }
+
+    /* Floating emojis animation */
+    .emoji {
+      position: absolute;
+      font-size: 1.8rem;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>🎉 Congratulations on your purchase!<br>Click the button below to access your order and be happy ❤</h1>
+    <a class="button" href="https://drive.google.com/drive/folders/1-EfYNQ8j1gGysF_zab2tNf0IrEp_mb-1" target="_blank">Access Your Order</a>
+  </div>
+
+  <div class="insta">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    <a href="https://www.instagram.com/anesilva_fsc" target="_blank">@anesilva_fsc (support)</a>
+  </div>
+
+  <script>
+    const emojis = ['❤️', '🎉', '💖', '💕', '💫'];
+    for (let i = 0; i < 20; i++) {
+      const span = document.createElement('span');
+      span.className = 'emoji';
+      span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      span.style.left = Math.random() * 100 + 'vw';
+      span.style.animationDuration = 4 + Math.random() * 4 + 's';
+      span.style.fontSize = 1 + Math.random() * 2 + 'rem';
+      document.body.appendChild(span);
+    }
+  </script>
+
+</body>
+</html>
